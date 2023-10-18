@@ -1,3 +1,4 @@
+import SparklesIcon from "./SparklesIcon";
 
 export default function DemoSection(){
     return(
@@ -6,6 +7,7 @@ export default function DemoSection(){
                 <video></video>
             </div>
             <div className="hidden sm:block">
+                <SparklesIcon />
 
             </div>
             <div className="bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
