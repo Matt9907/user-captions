@@ -1,3 +1,4 @@
+import SparklesIcon from '@/components/SparklesIcon'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,8 +16,12 @@ export default function RootLayout({ children }) {
         <main className='p-4 max-w-2xl mx-auto'>
           <header className='flex justify-between my-2 sm:my-8'>
             <Link href= "/" className="flex gap-1">
+              <SparklesIcon />
               <span>Epic Captions</span>
             </Link>
+            <nav className='flex items-center gap-2 sm: gap-6 text-white/80 text-sm sm:text-bas'>
+              
+            </nav>
           </header>
           
         </main>
