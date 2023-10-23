@@ -20,6 +20,9 @@ export default function RootLayout({ children }) {
               <span>Epic Captions</span>
             </Link>
             <nav className='flex items-center gap-2 sm: gap-6 text-white/80 text-sm sm:text-bas'>
+              <Link href="/">Home</Link>
+              <Link href="/pricing">Pricing</Link>
+              <a href= "mailto:contact@epiccaptions.com">Contact</a>
               
             </nav>
           </header>
