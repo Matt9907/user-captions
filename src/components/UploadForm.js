@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import UploadIcon from "./UploadIcon";
 
 
 
@@ -41,10 +42,11 @@ export default function UploadFunction(){
                 </div>
             </div>
         )}
-        
-        
-        
-        
+        <label className="bg-green-600 py-2 px-6 rounded-full inline-flex gap-2 border-2 ">
+            <UploadIcon />
+            <span>Choose file</span>
+            <input onChange={upload} type= "file" className="hidden" />
+        </label>
         
         
         </>
