@@ -13,7 +13,6 @@ export default function DemoSection(){
             <div className="bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
                 <video></video>
             </div>
-//finish section when home 
         </section>
     );
 }
