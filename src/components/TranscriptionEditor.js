@@ -14,7 +14,7 @@ export default function TranscriptionEditor({
 
     return(
         <>
-        
+        //Finish this component in the morning
         </>
     )
 }
