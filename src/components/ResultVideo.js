@@ -21,8 +21,12 @@ export default function ResultVideo({filename, transcriptionItems}){
         const ffmpeg = ffmpegRef.current;
         const baseURL = ''
         await ffmpeg.load({
-            
-        })
+
+        });
+
+        await ffmpeg.writeFile('');
+        await ffmpeg.writeFile('');
+        setLoaded(true);
     }
 
 }
