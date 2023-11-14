@@ -29,4 +29,8 @@ export default function ResultVideo({filename, transcriptionItems}){
         setLoaded(true);
     }
 
+    const transcode = async () =>{
+        const ffmpeg = ffmpegRef.current;
+    }
+
 }
