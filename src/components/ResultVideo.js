@@ -36,6 +36,15 @@ export default function ResultVideo({filename, transcriptionItems}){
 
     const transcode = async () =>{
         const ffmpeg = ffmpegRef.current;
+        const srt = transcriptionItemsToSrt(transcriptionItems);
+        await ffmpeg.writeFile(filename, await fetchFile(videoUrl));
+        await ffmpeg.writeFile('subs.srt',srt);
+        videoRef.current.src = videoUrl;
+        await new Promise((resolve,reject) =>{
+            videoRef.current.onloadedmetadata = resolve;
+
+        });
+        
     }
 
 }
