@@ -44,6 +44,18 @@ export default function ResultVideo({filename, transcriptionItems}){
             videoRef.current.onloadedmetadata = resolve;
 
         });
+
+        const duration = videoRef.current.duration;
+        ffmpeg.on('log', ({message}) =>{
+            const regexResult = /time=([0-9:.] +) /.exec(message);
+            if(regexResult && regexResult?.[1]){
+                const howMuchIsDone = regexResult?.[1];
+                const [hours,minutes,seconds] = howMuchIsDone.split(':');
+                const doneTotalSeconds = hours * 3600 + minutes * 60 + seconds;
+                const videoProgress = doneTotalSeconds/duration;
+                setProgress(videoProgress);
+            }
+        });
         
     }
 
