@@ -56,6 +56,28 @@ export default function ResultVideo({filename, transcriptionItems}){
                 setProgress(videoProgress);
             }
         });
+
+        await ffmpeg.exec([
+            '-i', filename,
+            '-preset','ultrafast',
+            '-vf', 
+            'output.,mp4'
+        ]);
+
+        return(
+            <>
+
+            <div className="mb-4">
+                <button 
+                onClick={transcode}
+                className="bg-green-600 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-purple"
+            </div>
+
+
+
+
+            </>
+        )
         
     }
 
