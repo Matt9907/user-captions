@@ -82,6 +82,15 @@ export default function ResultVideo({filename, transcriptionItems}){
                        value={primaryColor}
                        onChange={ev => setPrimaryColor(ev.target.value)}/>
                        <br />
+
+                outline color:
+                <input type="color"
+                       value={outlineColor}
+                       onChange={ev => setOutlineColor(ev.target.value)} />
+            </div>
+
+            <div>
+                
             </div>
 
 
