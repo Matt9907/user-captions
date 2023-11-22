@@ -78,6 +78,10 @@ export default function ResultVideo({filename, transcriptionItems}){
             </div>
             <div>
                 primary color:
+                <input type="color"
+                       value={primaryColor}
+                       onChange={ev => setPrimaryColor(ev.target.value)}/>
+                       <br />
             </div>
 
 
