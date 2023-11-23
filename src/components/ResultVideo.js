@@ -106,6 +106,13 @@ export default function ResultVideo({filename, transcriptionItems}){
                         </div>
                         </div>
                 )}
+                <video 
+                    data-video={0}
+                    ref={videoRef}
+                    controls>
+
+                    </video>
+
                 
             </div>
 
@@ -113,7 +120,7 @@ export default function ResultVideo({filename, transcriptionItems}){
 
 
             </>
-        )
+        );
         
     }
 
