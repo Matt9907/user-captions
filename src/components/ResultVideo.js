@@ -89,7 +89,10 @@ export default function ResultVideo({filename, transcriptionItems}){
                        onChange={ev => setOutlineColor(ev.target.value)} />
             </div>
 
-            <div>
+            <div className="rounded-xl overflow-hidden relative">
+                {progress && progress < 1 &&(
+                    
+                )}
                 
             </div>
 
