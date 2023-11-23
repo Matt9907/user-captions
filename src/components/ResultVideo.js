@@ -91,7 +91,16 @@ export default function ResultVideo({filename, transcriptionItems}){
 
             <div className="rounded-xl overflow-hidden relative">
                 {progress && progress < 1 &&(
-                    
+                    <div className="absolute inset-0 bg-black/80 flex items-center">
+                        <div className="w-full text-center" >
+                            <div className="bg-bg-gradient-from/50 mx-8 rounded-lg overflow-hidden relative">
+                                <div className="bg-bg-gradient-from h-8">
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
                 )}
                 
             </div>
