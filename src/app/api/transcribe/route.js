@@ -15,6 +15,16 @@ function createTranscriptionCommand(filename){
         OutputKey: filename + ".transcription",
         IdentifyLanguage: true,
 
+        Media:{
+            MediaFileUri: 's3://' +  "" + '/'+filename,
+        },
 
-    })
+
+    });
+}
+
+async function createTranscriptionJob(filename){
+    const transcribeClient = getClient();
+    const transcriptionCommand = createTranscriptionCommand(filename);
+    return transcribeClient.send(transcriptionCommand);
 }
