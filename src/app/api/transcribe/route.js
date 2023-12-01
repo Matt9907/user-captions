@@ -28,3 +28,17 @@ async function createTranscriptionJob(filename){
     const transcriptionCommand = createTranscriptionCommand(filename);
     return transcribeClient.send(transcriptionCommand);
 }
+
+async function getJob(filename){
+    const transcribeClient = getClient();
+    let jobStatusResult = null;
+    try{
+        const transcriptionJobStatusCommand = new GetTranscriptionJobCommand({
+            TranscriptionJobName: filename,
+        });
+        jobStatusResult = await transcribeClient.send(
+            transcriptionJobStatusCommand
+        );
+    }catch  (e) {}
+    return jobStatusResult;
+}
