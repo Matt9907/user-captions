@@ -55,6 +55,13 @@ async function streamToString(stream){
 async function getTranscriptionFile(filename){
     const transcriptionFile = filename + '.transcription';
     const s3client = new S3Client({
-        
-    })
+        region: 'us-east-1',
+        credentials:{
+            accessKeyId:"",
+            secretAccessKey: '',
+        },
+
+    });
+
+    
 }
