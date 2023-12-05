@@ -51,3 +51,10 @@ async function streamToString(stream){
         stream.on('error', reject);
     });
 }
+
+async function getTranscriptionFile(filename){
+    const transcriptionFile = filename + '.transcription';
+    const s3client = new S3Client({
+        
+    })
+}
