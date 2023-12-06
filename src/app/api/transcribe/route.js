@@ -62,6 +62,17 @@ async function getTranscriptionFile(filename){
         },
 
     });
+    const getObjectCommand = new GetObjectCommand({
+        Bucket: "",
+        Key: "",
+    });
+    let transcriptionFileResponse = null;
+    try{
+        transcriptionFileResponse = await s3client.send(getObjectCommand);
+    } catch (e) {}
+    if(transcriptionFileResponse){
+
+    }
 
     
 }
