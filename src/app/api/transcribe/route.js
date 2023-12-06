@@ -71,8 +71,12 @@ async function getTranscriptionFile(filename){
         transcriptionFileResponse = await s3client.send(getObjectCommand);
     } catch (e) {}
     if(transcriptionFileResponse){
+        return JSON.parse(
+            await streamToString(transcriptionFileResponse.Body)
+        );
+
 
     }
-
+    return null;
     
 }
