@@ -92,4 +92,12 @@ export async function GET(req){
             transcription,
         });
     }
+
+    const existingJob = await getJob(filename);
+
+    if(existingJob){
+        return Response.json({
+            status: existingJob.TranscribeJob.TranscriptionJobStatus,
+        })
+    }
 }
