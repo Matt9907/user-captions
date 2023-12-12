@@ -1,4 +1,4 @@
-import SparklesIcon from '@/components/SparklesIcon'
+import SparklesIcon from '../../components/SparklesIcon'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
