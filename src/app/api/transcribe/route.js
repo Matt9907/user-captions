@@ -100,4 +100,13 @@ export async function GET(req){
             status: existingJob.TranscribeJob.TranscriptionJobStatus,
         })
     }
+
+    if(!existingJob){
+        const newJob = await createTranscriptionJob(filename);
+
+        return Response.json({
+            status: newJob.TranscriptionJob.TranscriptionJobStatus,
+        });
+    }
+    return Response.json(null);
 }
