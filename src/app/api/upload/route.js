@@ -18,6 +18,12 @@ export async fucntion POST(req){
     const newName = id + '.' + ext;
 
     const uploadCommand = new PutObjectCommand({
+        Bucket: "",
+        Body: data,
+        ACL: 'public-read',
+        ContentType: type,
+        
+        
         
     })
     
