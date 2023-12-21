@@ -1,4 +1,4 @@
-export async fucntion POST(req){
+export async function POST(req){
     const formData = await req.formData();
     const file = formData.get('file');
     const {name, type} = file;
@@ -22,10 +22,12 @@ export async fucntion POST(req){
         Body: data,
         ACL: 'public-read',
         ContentType: type,
+        Key: newName,
         
         
         
-    })
+    });
+
     
     await  s3client.send(uploadCommand);
     return Response.json({name, ext, newName, id});
